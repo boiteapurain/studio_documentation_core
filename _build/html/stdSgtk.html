@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stdSgtk &mdash; Studio 0.0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="stdUtils" href="stdUtils.html" />
+    <link rel="prev" title="stdDispatch" href="stdDispatch.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Studio
+          </a>
+              <div class="version">
+                0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Studio presentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="management.html">Studio Management</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Studio Api documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="stdDispatch.html">stdDispatch</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">stdSgtk</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stdsgtkinit"><code class="docutils literal notranslate"><span class="pre">stdSgtkInit</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stdsgtkutils"><code class="docutils literal notranslate"><span class="pre">stdSgtkUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishutils"><code class="docutils literal notranslate"><span class="pre">publishUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workfileutils"><code class="docutils literal notranslate"><span class="pre">workFileUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fieldsutils"><code class="docutils literal notranslate"><span class="pre">fieldsUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#templateutils"><code class="docutils literal notranslate"><span class="pre">templateUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personutils"><code class="docutils literal notranslate"><span class="pre">personUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dbutils"><code class="docutils literal notranslate"><span class="pre">dbUtils</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stdUtils.html">stdUtils</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Studio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">Studio Api documentation</a> &raquo;</li>
+      <li>stdSgtk</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/stdSgtk.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="stdsgtk">
+<h1>stdSgtk<a class="headerlink" href="#stdsgtk" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="stdsgtkinit">
+<h2><code class="docutils literal notranslate"><span class="pre">stdSgtkInit</span></code><a class="headerlink" href="#stdsgtkinit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdSgtkInit.InitTk">
+<em class="property">class </em><code class="descclassname">stdSgtkInit.</code><code class="descname">InitTk</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkInit.InitTk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Select SGTK initialization method based on arg variable</p>
+<dl class="method">
+<dt id="stdSgtkInit.InitTk.init_from_PATH">
+<code class="descname">init_from_PATH</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkInit.InitTk.init_from_PATH" title="Permalink to this definition">¶</a></dt>
+<dd><p>method who extract entity task and descriptor using path.
+set the self.task and self.descriptor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>string</em>) – file path on server</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkInit.InitTk.init_from_TANK_CURRENT_PC">
+<code class="descname">init_from_TANK_CURRENT_PC</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkInit.InitTk.init_from_TANK_CURRENT_PC" title="Permalink to this definition">¶</a></dt>
+<dd><p>initialize self.descriptor using TANK_CURRENT_PC environnement
+provided by Shotgrid desktop manager</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkInit.InitTk.init_from_TASK">
+<code class="descname">init_from_TASK</code><span class="sig-paren">(</span><em>task</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkInit.InitTk.init_from_TASK" title="Permalink to this definition">¶</a></dt>
+<dd><p>method who create the descriptor using entity task.
+set the self.task and self.descriptor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>task</strong> (<em>Dict</em><em>(</em><em>)</em>) – SG entity task dictionary</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkInit.InitTk.run_bootstrap">
+<code class="descname">run_bootstrap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkInit.InitTk.run_bootstrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>start sgtk on dcc start up</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="stdsgtkutils">
+<h2><code class="docutils literal notranslate"><span class="pre">stdSgtkUtils</span></code><a class="headerlink" href="#stdsgtkutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdSgtkUtils.contextUtils">
+<em class="property">class </em><code class="descclassname">stdSgtkUtils.</code><code class="descname">contextUtils</code><a class="headerlink" href="#stdSgtkUtils.contextUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>_summary_</p>
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_context">
+<code class="descname">get_context</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_context_from_path">
+<code class="descname">get_context_from_path</code><span class="sig-paren">(</span><em>workFilePath</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_context_from_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>workFilePath</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_engine">
+<code class="descname">get_engine</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_engine" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_entity_infos">
+<code class="descname">get_entity_infos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_entity_infos" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_project_infos">
+<code class="descname">get_project_infos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_project_infos" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_project_path">
+<code class="descname">get_project_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_project_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_sg">
+<code class="descname">get_sg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_sg" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_step_from_task">
+<code class="descname">get_step_from_task</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_step_from_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_step_infos">
+<code class="descname">get_step_infos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_step_infos" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_task_infos">
+<code class="descname">get_task_infos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_task_infos" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_tasks_from_entity">
+<code class="descname">get_tasks_from_entity</code><span class="sig-paren">(</span><em>addFilter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_tasks_from_entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>addFilter</strong> (<em>_type_</em><em>, </em><em>optional</em>) – _description_, defaults to None</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.get_tk">
+<code class="descname">get_tk</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.get_tk" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.contextUtils.set_context">
+<code class="descname">set_context</code><span class="sig-paren">(</span><em>ctx</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.contextUtils.set_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ctx</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="publishutils">
+<h2><code class="docutils literal notranslate"><span class="pre">publishUtils</span></code><a class="headerlink" href="#publishutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdSgtkUtils.publishUtils">
+<em class="property">class </em><code class="descclassname">stdSgtkUtils.</code><code class="descname">publishUtils</code><a class="headerlink" href="#stdSgtkUtils.publishUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stdSgtkUtils.contextUtils" title="stdSgtkUtils.contextUtils"><code class="xref py py-class docutils literal notranslate"><span class="pre">stdSgtkUtils.contextUtils</span></code></a></p>
+<p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>contextUtils</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="stdSgtkUtils.publishUtils.get_latest_publish_file">
+<code class="descname">get_latest_publish_file</code><span class="sig-paren">(</span><em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.publishUtils.get_latest_publish_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.publishUtils.get_publishFiles_Type">
+<code class="descname">get_publishFiles_Type</code><span class="sig-paren">(</span><em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.publishUtils.get_publishFiles_Type" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.publishUtils.set_register_publish">
+<code class="descname">set_register_publish</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.publishUtils.set_register_publish" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="workfileutils">
+<h2><code class="docutils literal notranslate"><span class="pre">workFileUtils</span></code><a class="headerlink" href="#workfileutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdSgtkUtils.workFileUtils">
+<em class="property">class </em><code class="descclassname">stdSgtkUtils.</code><code class="descname">workFileUtils</code><span class="sig-paren">(</span><em>workFilePath=None</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.workFileUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stdSgtkUtils.contextUtils" title="stdSgtkUtils.contextUtils"><code class="xref py py-class docutils literal notranslate"><span class="pre">stdSgtkUtils.contextUtils</span></code></a></p>
+<p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>contextUtils</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="stdSgtkUtils.workFileUtils.get_upper_version">
+<code class="descname">get_upper_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.workFileUtils.get_upper_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.workFileUtils.get_workFile_path">
+<code class="descname">get_workFile_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.workFileUtils.get_workFile_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>get work file path</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.workFileUtils.save_workFile">
+<code class="descname">save_workFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.workFileUtils.save_workFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>save work file version</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="fieldsutils">
+<h2><code class="docutils literal notranslate"><span class="pre">fieldsUtils</span></code><a class="headerlink" href="#fieldsutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdSgtkUtils.fieldsUtils">
+<em class="property">class </em><code class="descclassname">stdSgtkUtils.</code><code class="descname">fieldsUtils</code><a class="headerlink" href="#stdSgtkUtils.fieldsUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stdSgtkUtils.contextUtils" title="stdSgtkUtils.contextUtils"><code class="xref py py-class docutils literal notranslate"><span class="pre">stdSgtkUtils.contextUtils</span></code></a></p>
+<p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>contextUtils</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="stdSgtkUtils.fieldsUtils.get_fields_cut_in_cut_out">
+<code class="descname">get_fields_cut_in_cut_out</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.fieldsUtils.get_fields_cut_in_cut_out" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.fieldsUtils.get_parent_assets">
+<code class="descname">get_parent_assets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.fieldsUtils.get_parent_assets" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.fieldsUtils.get_parent_tasks">
+<code class="descname">get_parent_tasks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.fieldsUtils.get_parent_tasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.fieldsUtils.get_project_fps">
+<code class="descname">get_project_fps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.fieldsUtils.get_project_fps" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.fieldsUtils.get_project_resolution">
+<code class="descname">get_project_resolution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.fieldsUtils.get_project_resolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="templateutils">
+<h2><code class="docutils literal notranslate"><span class="pre">templateUtils</span></code><a class="headerlink" href="#templateutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdSgtkUtils.templateUtils">
+<em class="property">class </em><code class="descclassname">stdSgtkUtils.</code><code class="descname">templateUtils</code><span class="sig-paren">(</span><em>workFilePath=None</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.templateUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stdSgtkUtils.contextUtils" title="stdSgtkUtils.contextUtils"><code class="xref py py-class docutils literal notranslate"><span class="pre">stdSgtkUtils.contextUtils</span></code></a></p>
+<p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>contextUtils</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="stdSgtkUtils.templateUtils.get_fields_from_path">
+<code class="descname">get_fields_from_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.templateUtils.get_fields_from_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.templateUtils.get_template_path">
+<code class="descname">get_template_path</code><span class="sig-paren">(</span><em>template_name</em>, <em>addFields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.templateUtils.get_template_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>template_name</strong> (<em>_type_</em>) – _description_</li>
+<li><strong>addFields</strong> (<em>_type_</em><em>, </em><em>optional</em>) – _description_, defaults to None</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">_description_</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">_type_</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.templateUtils.set_workFilePath">
+<code class="descname">set_workFilePath</code><span class="sig-paren">(</span><em>workFilePath</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.templateUtils.set_workFilePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>workFilePath</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="personutils">
+<h2><code class="docutils literal notranslate"><span class="pre">personUtils</span></code><a class="headerlink" href="#personutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdSgtkUtils.personUtils">
+<em class="property">class </em><code class="descclassname">stdSgtkUtils.</code><code class="descname">personUtils</code><a class="headerlink" href="#stdSgtkUtils.personUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stdSgtkUtils.contextUtils" title="stdSgtkUtils.contextUtils"><code class="xref py py-class docutils literal notranslate"><span class="pre">stdSgtkUtils.contextUtils</span></code></a></p>
+<p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>contextUtils</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="stdSgtkUtils.personUtils.query_username_login">
+<code class="descname">query_username_login</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.personUtils.query_username_login" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="dbutils">
+<h2><code class="docutils literal notranslate"><span class="pre">dbUtils</span></code><a class="headerlink" href="#dbutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdSgtkUtils.dbUtils">
+<em class="property">class </em><code class="descclassname">stdSgtkUtils.</code><code class="descname">dbUtils</code><a class="headerlink" href="#stdSgtkUtils.dbUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stdSgtkUtils.contextUtils" title="stdSgtkUtils.contextUtils"><code class="xref py py-class docutils literal notranslate"><span class="pre">stdSgtkUtils.contextUtils</span></code></a></p>
+<p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>contextUtils</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="stdSgtkUtils.dbUtils.unregisterAll">
+<code class="descname">unregisterAll</code><span class="sig-paren">(</span><em>pojectPath</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.dbUtils.unregisterAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pojectPath</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdSgtkUtils.dbUtils.unregisterEntity">
+<code class="descname">unregisterEntity</code><span class="sig-paren">(</span><em>entityType</em>, <em>projectId</em><span class="sig-paren">)</span><a class="headerlink" href="#stdSgtkUtils.dbUtils.unregisterEntity" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>entityType</strong> (<em>_type_</em>) – _description_</li>
+<li><strong>projectId</strong> (<em>_type_</em>) – _description_</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stdDispatch.html" class="btn btn-neutral float-left" title="stdDispatch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="stdUtils.html" class="btn btn-neutral float-right" title="stdUtils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Mathieu Negrel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

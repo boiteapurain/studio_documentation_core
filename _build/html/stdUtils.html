@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stdUtils &mdash; Studio 0.0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="stdSgtk" href="stdSgtk.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Studio
+          </a>
+              <div class="version">
+                0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Studio presentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="management.html">Studio Management</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Studio Api documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="stdDispatch.html">stdDispatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stdSgtk.html">stdSgtk</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">stdUtils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stdlogutils"><code class="docutils literal notranslate"><span class="pre">stdLogUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stdpathutils"><code class="docutils literal notranslate"><span class="pre">stdPathUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stdvarutils"><code class="docutils literal notranslate"><span class="pre">stdVarUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">stdVarUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stdfilesutils"><code class="docutils literal notranslate"><span class="pre">stdFilesUtils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">stdFilesUtils</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Studio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">Studio Api documentation</a> &raquo;</li>
+      <li>stdUtils</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/stdUtils.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="stdutils">
+<h1>stdUtils<a class="headerlink" href="#stdutils" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="stdlogutils">
+<h2><code class="docutils literal notranslate"><span class="pre">stdLogUtils</span></code><a class="headerlink" href="#stdlogutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdLogUtils.stdOutputLogs">
+<em class="property">class </em><code class="descclassname">stdLogUtils.</code><code class="descname">stdOutputLogs</code><span class="sig-paren">(</span><em>level=20</em><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>low level class, who wrap the logging method
+The basic idea is to use this class as buffer between external modules and pipeline scripts.</p>
+<dl class="method">
+<dt id="stdLogUtils.stdOutputLogs.critical">
+<code class="descname">critical</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs.critical" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdLogUtils.stdOutputLogs.debug">
+<code class="descname">debug</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdLogUtils.stdOutputLogs.error">
+<code class="descname">error</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdLogUtils.stdOutputLogs.exception">
+<code class="descname">exception</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs.exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdLogUtils.stdOutputLogs.info">
+<code class="descname">info</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdLogUtils.stdOutputLogs.output_file">
+<code class="descname">output_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs.output_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>file output with full debug logging settings</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdLogUtils.stdOutputLogs.output_stream">
+<code class="descname">output_stream</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs.output_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>stream output with custom debug logging settings</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdLogUtils.stdOutputLogs.set_level">
+<code class="descname">set_level</code><span class="sig-paren">(</span><em>level</em><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs.set_level" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="stdLogUtils.stdOutputLogs.warning">
+<code class="descname">warning</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#stdLogUtils.stdOutputLogs.warning" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="stdpathutils">
+<h2><code class="docutils literal notranslate"><span class="pre">stdPathUtils</span></code><a class="headerlink" href="#stdpathutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdPathUtils.stdPathUtils">
+<em class="property">class </em><code class="descclassname">stdPathUtils.</code><code class="descname">stdPathUtils</code><span class="sig-paren">(</span><em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#stdPathUtils.stdPathUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>library class for path utils</p>
+<dl class="method">
+<dt id="stdPathUtils.stdPathUtils.convertPathToLetters">
+<code class="descname">convertPathToLetters</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#stdPathUtils.stdPathUtils.convertPathToLetters" title="Permalink to this definition">¶</a></dt>
+<dd><p>method to convert UNC path to a windows letter style path</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">return UNC path to windows letter path</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdPathUtils.stdPathUtils.convertPathToLinux">
+<code class="descname">convertPathToLinux</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdPathUtils.stdPathUtils.convertPathToLinux" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdPathUtils.stdPathUtils.convertPathToUnc">
+<code class="descname">convertPathToUnc</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#stdPathUtils.stdPathUtils.convertPathToUnc" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdPathUtils.stdPathUtils.convertPathToWindows">
+<code class="descname">convertPathToWindows</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdPathUtils.stdPathUtils.convertPathToWindows" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="stdvarutils">
+<h2><code class="docutils literal notranslate"><span class="pre">stdVarUtils</span></code><a class="headerlink" href="#stdvarutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdVarUtils.stdDicUtils">
+<em class="property">class </em><code class="descclassname">stdVarUtils.</code><code class="descname">stdDicUtils</code><span class="sig-paren">(</span><em>var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#stdVarUtils.stdDicUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>library class for Dict utils</p>
+<dl class="method">
+<dt id="stdVarUtils.stdDicUtils.removeKeys">
+<code class="descname">removeKeys</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#stdVarUtils.stdDicUtils.removeKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id1">
+<h2><code class="docutils literal notranslate"><span class="pre">stdVarUtils</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdVarUtils.stdArrayUtils">
+<em class="property">class </em><code class="descclassname">stdVarUtils.</code><code class="descname">stdArrayUtils</code><span class="sig-paren">(</span><em>arr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#stdVarUtils.stdArrayUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>library class for Array utils</p>
+<dl class="method">
+<dt id="stdVarUtils.stdArrayUtils.package">
+<code class="descname">package</code><span class="sig-paren">(</span><em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#stdVarUtils.stdArrayUtils.package" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>size</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="stdfilesutils">
+<h2><code class="docutils literal notranslate"><span class="pre">stdFilesUtils</span></code><a class="headerlink" href="#stdfilesutils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdFilesUtils.stdFilesUtils">
+<em class="property">class </em><code class="descclassname">stdFilesUtils.</code><code class="descname">stdFilesUtils</code><a class="headerlink" href="#stdFilesUtils.stdFilesUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>object</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="stdFilesUtils.stdFilesUtils.files_copy">
+<code class="descname">files_copy</code><span class="sig-paren">(</span><em>src</em>, <em>dst</em><span class="sig-paren">)</span><a class="headerlink" href="#stdFilesUtils.stdFilesUtils.files_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> (<em>_type_</em>) – _description_</li>
+<li><strong>dst</strong> (<em>_type_</em>) – _description_</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdFilesUtils.stdFilesUtils.files_openFolder">
+<code class="descname">files_openFolder</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#stdFilesUtils.stdFilesUtils.files_openFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdFilesUtils.stdFilesUtils.folders_remove">
+<code class="descname">folders_remove</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#stdFilesUtils.stdFilesUtils.folders_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="stdFilesUtils.stdFilesUtils.set_readOnly_files">
+<code class="descname">set_readOnly_files</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#stdFilesUtils.stdFilesUtils.set_readOnly_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h2><code class="docutils literal notranslate"><span class="pre">stdFilesUtils</span></code><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="stdFilesUtils.stdYamlUtils">
+<em class="property">class </em><code class="descclassname">stdFilesUtils.</code><code class="descname">stdYamlUtils</code><span class="sig-paren">(</span><em>env</em><span class="sig-paren">)</span><a class="headerlink" href="#stdFilesUtils.stdYamlUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>object</strong> (<em>_type_</em>) – _description_</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="stdFilesUtils.stdYamlUtils.get_config">
+<code class="descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stdFilesUtils.stdYamlUtils.get_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">_description_</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">_type_</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stdSgtk.html" class="btn btn-neutral float-left" title="stdSgtk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Mathieu Negrel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
